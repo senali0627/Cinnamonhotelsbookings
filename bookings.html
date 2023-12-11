@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinnamon Hotels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caladea&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style2.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+ 
+</head>
+<body>
+        <!-------------------------------------- Nvigation bar ----------------------------------->
+    <section class="navbar">
+        <header class="header">
+         <a href="./index.html" class="logo"><img src="./logo.png" alt="main logo of the hotel"></a>
+         <input class="menu-btn" type="checkbox" id="menu-btn">
+         <label class="menu-icon" for="menu-btn">-<span class="nav-icon"></span></label>
+         <ul class="menu">
+          <li> <a  href="./index.html">Home</a> </li>
+          <li> <a  href="./branches.html">Branches</a></li>
+          <li> <a  href="./adventures.html">Adventures</a></li>
+          <li> <a  href="./restaurants.html">Restaurants</a></li>
+          <li> <a  href="./gallery.html">Gallery</a></li>
+          <li> <a  href="./bookings.html">Bookings</a></li>
+          <li> <a  href="./contactus.html">Contact us</a></li>
+ 
+         </ul>
+        </header>
+       </section>
+       <!------------------------------------------------------Main image----------------------------------------------------------- -->
+       <header class="header__container_bookings">
+        <section class="header__image__container_bookings">
+          <section class="header__content_bookings">
+            <h1>Enjoy Your Dream Vacation</h1>
+            <p>Book Hotels, Adventures and stay packages at lowest price.</p>
+          </section>
+        </section>
+      </header>
+
+      <!------------------------------------------------------------ booking form------------------------------------------------------>
+    <section class="booking-heading">
+        <h1>Your Gateway to Unforgettable Experiences<br> Book Your Adventure Today! <br>Discover Unmatched Comfort and Luxury at our hotels!</h1>
+    </section>
+      <!---- Tables updating real time current bookings ---->
+  <section class="tablesection">
+    <h2 class="title">Adventure Bookings</h2>
+    <table class="table" id="bookingTable">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Local Adults</th>
+          <th>Foreign Adults</th>
+          <th>Local Children</th>
+          <th>Foreign Children</th>
+          <th>Duration</th>
+          <th>Guide</th>
+          <th>Current  Cost</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+  <section class="tablesection">
+    <h2 class="title"> Room Bookings</h2>
+    <table class="table" id="bookingTable2">
+      <thead>
+        <tr>
+          <th>Duration (Nights)</th>
+          <th>Single Rooms</th>
+          <th>Double Rooms</th>
+          <th>Triple Rooms</th>
+          <th>Extra bed</th>
+          <th>Extra requirements</th>
+          <th>Current Cost</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+   <!----------------------------------------- Main booking form --------------------------------------> 
+<section class="booking-container">
+  <section class="booking-container-head" >
+    <h1 class="title">Choose your bookings </h1>
+
+    <form class="form-body" id="bookingFormMain">
+
+    <label for="name" class="form-label">Name of the Customer:</label>
+    <input type="text" id="name" name="name" placeholder="Type your name" required>
+
+    <label for="email" class="form-label">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Type your E-mail Addess" required>
+
+    <h2 class="form-label">What do you want to book?</h2>
+    
+    
+      <label for="adventures" class="form-label">
+        <input type="checkbox" id="adventures" >Adventures
+      </label>
+  
+      <label for="roomBookings" class="form-label">
+        <input type="checkbox" id="roomBookings" >Room Bookings
+      </label>
+    
+     </form>
+    </section>
+</section>
+      <!-------------------------------------- Adventure booking form ----------------------------------->
+
+<section class="booking-container">
+  <section class="booking-container-body" id="dynamicsection1" style="display: none;">
+     <!---This section only appears when user select "Adventures" checkbox from the main booking form-->
+    <h1 class="title">Adventure Booking (diving) </h1>
+    <form class="form-body" id="bookingForm">
+
+     <p>Current booking details and the cost will be updated in the table above</p>
+     
+    <label for="date" class="form-label">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+    
+    <label for="localAdults" class="form-label">Number of Local Adults:</label>
+    <input type="number" id="localAdults" name="localAdults" min="0"><br>
+    
+    <label for="foreignAdults" class="form-label">Number of Foreign Adults:</label>
+    <input type="number" id="foreignAdults" name="foreignAdults" min="0"><br>
+    
+    <label for="localChildren" class="form-label">Number of Local Children:</label>
+    <input type="number" id="localChildren" name="localChildren" min="0"><br>
+    
+    <label for="foreignChildren" class="form-label">Number of Foreign Children:</label>
+    <input type="number" id="foreignChildren" name="foreignChildren" min="0"><br>
+
+    <legend class="form-label">Duration:</legend>
+    <fieldset>
+    <input type="checkbox" id="duration1" name="duration" value="1 Hour">
+    <label for="duration1" class="form-label">1 Hour session</label><br>
+    <input type="checkbox" id="duration2" name="duration" value="2 Hours">
+    <label for="duration2" class="form-label">2 Hours session</label><br>
+    <input type="checkbox" id="duration3" name="duration" value="3 Hours">
+    <label for="duration3" class="form-label">3 Hours session</label><br>
+    </fieldset>
+    <br>
+
+    <legend class="form-label">Guide:</legend>
+    <fieldset>
+    <input type="checkbox" id="adultGuide" name="guide" value="Adult Guide">
+    <label for="adultGuide" class="form-label">Adult Guide</label><br>
+    <input type="checkbox" id="childGuide" name="guide" value="Child Guide">
+    <label for="childGuide" class="form-label">Child Guide</label><br><br>
+    </fieldset>
+    <br>
+    <p>Click the button below to confirm your Adventure bookings</p>
+
+    <section class="send-button">
+      <button type="submit" id="bookAdventurebtn">Book Adventure</button>
+    </section>
+ 
+    <section id="thankYouMessage"></section>
+
+  </form>
+  </section>
+
+       <!---------------------------- Hotel room  booking form -----------------------------------> 
+
+
+  <section class="booking-container-body" id="dynamicsection2" style="display: none;">
+     <!--This section only appears when user select "Room bookings" checkbox from the main booking form-->
+
+    <h1 class="title">Hotel room Booking </h1>
+    <p>Current booking details and the cost will be updated in the table above</p>
+    <form class="form-body" id="bookingForm1" >
+  
+      <label for="checkIn" class="form-label">Check-in Date:</label>
+      <input type="date" id="checkIn" name="checkIn" required>
+      
+      <label for="checkOut" class="form-label">Check-out Date:</label>
+      <input type="date" id="checkOut" name="checkOut" required>
+
+      
+      <label for="kids" class="form-label">Number of Kids Above Age 5:</label>
+      <input type="number" id="kids" name="kids" min="0" value="0" required><br>
+  
+      <label for="adults" class="form-label">Number of Adults:</label>
+      <input type="number" id="adults" name="adults" min="0" value="0"><br>
+  
+      <label for="children" class="form-label">Number of Children:</label>
+      <input type="number" id="children" name="children" min="0" value="0"><br>
+
+      <label for="singleRoom" class="form-label">Number of Single Rooms:</label>
+      <input type="number" id="singleRoom" name="singleRoom" min="0" value="0"><br>
+  
+      <label for="doubleRoom" class="form-label">Number of Double Rooms:</label>
+      <input type="number" id="doubleRoom" name="doubleRoom" min="0" value="0"><br>
+  
+      <label for="tripleRoom" class="form-label">Number of Triple Rooms:</label>
+      <input type="number" id="tripleRoom" name="tripleRoom" min="0" value="0"><br>
+
+
+      <legend class="form-label">Extra Requirements:</legend>
+      <fieldset>
+      <input type="checkbox" id="wifi" name="extraRequirements" value="wifi">
+      <label for="wifi" class="form-label">WiFi</label><br>
+
+      <input type="checkbox" id="poolView" name="extraRequirements" value="poolView">
+      <label for="poolView" class="form-label">Pool View</label><br>
+
+      <input type="checkbox" id="gardenView" name="extraRequirements" value="gardenView">
+      <label for="gardenView" class="form-label">Garden View</label><br>
+
+      </fieldset>
+
+      <label for="extraBed" class="form-label">Number of Extra Beds:</label>
+      <input type="number" id="extraBed" name="extraBed" min="0" value="0"><br>
+      
+
+
+   <!--------------Text field to input promo code------------------------->
+
+      <label for="promoCode" class="form-label">Promo Code:</label>
+      <input type="text" id="promoCode" name="promoCode"><br>
+
+       <br>
+       <button type="button" id="loyaltyPoints">Loyalty Points</button> <!--------------Button to add loyalty points------------------------->
+
+       <br>
+       <button type="button" id="addtofavourites">Add to Favorites</button> <!-------------Button to add to favourites------------------------->>
+    
+       <p>Click the button to confirm your bookings</p>
+
+    <section class="send-button">
+      <button type="submit" id="bookNowBtn">Book Now</button>
+    </section>
+ 
+    <section id="roomsBookingonfirmMsg"></section>
+    </form>
+  </section>
+</section>
+
+   <!------------------------------------------------------------ Table updating overall bookings ----------------------------------->
+ <h2 class="title" id="Overallbookingstitle"> Overall bookings</h2>
+   <section class="tablesection" id="overallbookingscontent" >
+  
+    <table class="table" id="bookingTable3" >
+      <thead>
+        <tr >
+          <th>booking details</th>
+          <th>booking cost</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+   </section>
+ 
+ 
+  
+       
+
+  
+ <!--------------------------------------------------------- footer-------------------------------------------------- -->
+    
+ <footer class="footer-distributed">
+    <section class="footer-left">
+        <h3>Cinnamon<span>Hotels</span></h3>
+        <p class="footer-links">
+            <a href="./index.html">Home</a> |
+            <a href="./bookings.html">Bookings</a> |
+            <a href="./contactus.html">Contact</a> |
+            <a href="./restaurants.html">Restaurants</a>
+        </p>
+        <p class="footer-hotel-name">Copyright © 2023 <strong>Cinnamon Hotels</strong> All rights reserved</p>
+    </section>
+    <section class="footer-center">
+        <section>
+          <span class="material-symbols-outlined">
+            location_on
+            </span>
+            <p><span>Cinnamon Hotels & Resorts Management Ltd</span>Colombo2 </p>
+        </section>
+        <section>
+          <span class="material-symbols-outlined">
+            call
+            </span>
+            <p>+91 7445692</p>
+        </section>
+        <section>
+          <span class="material-symbols-outlined">
+            mail
+            </span>
+            <p><a href="mailto:bookings@cinnamonhotels.com">bookings@cinnamonhotels.com</a></p>
+        </section>
+    </section>
+    <section class="footer-right">
+        <p class="footer-company-about">
+            <span>About the hotel</span>
+            <strong>Cinnamon Hotels & Resortsr</strong>  is a major Sri Lankan luxury hotel chain brand.
+             Cinnamon Hotels was recognised as the most valuable hospitality brand in Sri Lanka for 2019 with
+              a brand equity of seven billion Sri Lankan Rupees.
+        </p>
+        <section class="footer-icons">
+            <a href="https://www.facebook.com/cinnamonhotels/"><img src="icons8-facebook-30.png" alt="facebook icon"></a>
+            <a href="https://www.instagram.com/cinnamonhotels/?hl=en"><img src="icons8-instagram-48.png" alt="instagram icon"></a>
+            <a href="https://lk.linkedin.com/company/cinnamon-hotels-&-resorts"><img src="icons8-linked-in-30.png" alt="linkedin icon"></a>
+            <a href="https://twitter.com/CinnamonHotels?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="icons8-twitter-48.png" alt="twitter icon"></a>
+            <a href="https://www.youtube.com/channel/UCw6HmIsvHGq2HcBQCzE7J5A"><img src="icons8-youtube-50.png" alt="youtube icon"></a>
+        </section>
+    </section>
+
+  
+  <!-- references -------------------------------------------------------------------------------------->
+  <!-- All the images-https://www.pexels.com/ -->
+  <!-- three font types- https://fonts.google.com/-->
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+
+</html>
